@@ -4,7 +4,7 @@ require 'json'
     count = 0
 
     file_log = File.open("photos", "w")
-    url = "https://graph.facebook.com/257558077593647?fields=photos"
+    url = "https://graph.facebook.com/381951238617677?fields=photos"
     first_page_posts = JSON.parse(open(URI.encode(url)).read)
 
     #first page (special case)
