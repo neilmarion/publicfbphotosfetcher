@@ -1,3 +1,4 @@
 *.sw*
 cfn
 cfn_bak
+cfn*
