@@ -10,8 +10,8 @@ require 'json'
     #first page (special case)
 
     first_page_posts['photos']['data'].each do |post|
-      puts post['source']
-      file_log.puts post['source'] 
+      puts post['images'][0]['source']
+      file_log.puts post['images'][0]['source']
       count = count + 1
       puts "#{count} photos downloaded"
     end
@@ -26,8 +26,8 @@ require 'json'
       puts "fetching next page of photos..."
       page_posts = JSON.parse(open(URI.encode(page_posts['paging']['next'])).read)
       page_posts['data'].each do |post|
-        puts post['source']
-        file_log.puts post['source'] 
+        puts post['images'][0]['source']
+        file_log.puts post['images'][0]['source']
         count = count + 1
         puts "#{count} photos downloaded"
       end
